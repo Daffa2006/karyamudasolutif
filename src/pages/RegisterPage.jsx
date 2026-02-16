@@ -46,7 +46,6 @@ export default function RegisterPage() {
           type="email"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          placeholder="example@mail.com"
           required
         />
         <FormInput
@@ -58,8 +57,6 @@ export default function RegisterPage() {
           onChange={(e) =>
             setFormData({ ...formData, password: e.target.value })
           }
-          placeholder="example@mail.com"
-          //   error={errors.password}
           required
         />
         <button

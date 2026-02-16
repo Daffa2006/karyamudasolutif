@@ -34,7 +34,9 @@ export default function Navbar() {
 
     return (firstInitial + lastInitial).toUpperCase();
   }
-
+  const handleNavigateToLoginPage = () => {
+    navigate("/login");
+  };
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
@@ -103,6 +105,7 @@ export default function Navbar() {
           </button>
           <Guest>
             <button
+              onClick={handleNavigateToLoginPage}
               type="button"
               className="py-2 px-3 inline-flex items-center gap-x-2 text-lg font-medium rounded-lg bg-layer border border-zinc-300 text-layer-foreground shadow-2xs hover:text-teal-600 hover:border-teal-600 transition-colors cursor-pointer focus:outline-hidden focus:bg-layer-focus disabled:opacity-50 disabled:pointer-events-none"
             >
