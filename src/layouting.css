@@ -1,0 +1,66 @@
+.struktur-grid {
+  display: grid;
+  grid-template-areas:
+    "a a a"
+    "b c d";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Grid Area Mapping */
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
+
+/* Responsive - md ke bawah jadi 1 kolom */
+@media (max-width: 768px) {
+  .struktur-grid {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    grid-template-columns: 1fr;
+  }
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-areas:
+    "a2 a2 d2"
+    "b2 c2 d2";
+  grid-template-columns: repeat(3, 1fr);
+}
+/* Mapping area */
+.a2 {
+  grid-area: a2;
+}
+.b2 {
+  grid-area: b2;
+}
+.c2 {
+  grid-area: c2;
+}
+.d2 {
+  grid-area: d2;
+}
+
+/* Responsive (tablet & mobile jadi 1 kolom) */
+@media (max-width: 768px) {
+  .galeri-grid {
+    grid-template-areas:
+      "a2"
+      "b2"
+      "c2"
+      "d2";
+    grid-template-columns: 1fr;
+  }
+}
